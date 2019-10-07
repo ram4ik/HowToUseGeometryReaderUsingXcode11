@@ -10,7 +10,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        GeometryReader { geometry in
+            Rectangle()
+                .foregroundColor(Color.red)
+                .frame(width: geometry.size.width / 2, height: geometry.size.height / 2)
+        }
     }
 }
 
